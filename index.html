@@ -1,0 +1,26 @@
+<html><head><title>BMI CALCULATOR</title>
+<SCRIPT Language="JavaScript">
+function calculatebmi()
+{
+var w,h,b,t;
+w=document.frmb.txtw.value;
+h=document.frmb.txth.value;
+b=w/(h*h);
+document.frmb.txtb.value=b;
+if(b<18.5)
+t="OH! YOU ARE UNDERWEIGHT";
+if(b>18.5&&b<24.9)
+t="CONGRATS!YOU ARE HEALTHY";
+if(b>24.9&&b<29.9)
+t="TAKE CARE ,YOU ARE OVERWEIGHT";
+if(b>29.9&&b<39.9)
+t="URGENT ATTENTION NEEDED!YOU ARE OBESE";
+document.frmb.txts.value=t;
+}
+</SCRIPT>
+</HEAD>
+<body background="bmiback.jpg"><center><h1>BMI CALCULATOR</h1></center><br><center><form name="frmb">
+Enter your weight in kg:&nbsp &nbsp &nbsp <input type="text" name="txtw"><br><br>
+Enter your height in m:&nbsp &nbsp &nbsp <input type="text" name="txth"><br><br>
+Your BMI is:&nbsp &nbsp &nbsp <input type="text" name="txtb"><br><br>
+<input type="button" value="Show" onClick="calculatebmi()"><br><br><textarea rows="5" cols="20" name="txts"></textarea></form></center><marquee><img src="bmim.jpg" height="300" width="300"></marquee></body></html>
